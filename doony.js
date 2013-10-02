@@ -470,30 +470,54 @@ jQuery(function($) {
                 dimension = this.getAttribute('width') * 0.5 + 8;
                 wrapper.style.marginRight = "15px";
                 wrapper.style.verticalAlign = "middle";
+            // XXX hack, this is for the main page job list
+            } else if (this.classList.contains("icon32x32")) {
+                dimension = 24;
+                wrapper.style.marginTop = "4px";
+                wrapper.style.marginLeft = "4px";
             } else {
-                dimension = this.getAttribute('width');
+                dimension = this.getAttribute('width') || 12;
             }
             $(wrapper).css('width', dimension);
             $(wrapper).css('height', dimension);
 
-            var a = $(this).parent("a");
             $(this).after(wrapper).remove();
         });
     };
 
-    var canvasDimension = 16;
     var replaceBouncingFloatyBall = function(selector, color) {
         $(selector).each(function() {
-            var a = $(this).parent("a");
+
+            if ($(this).next(".doony-canvas").length) {
+                return;
+            }
             var canvas = document.createElement('canvas');
             canvas.className = 'doony-canvas';
-            canvas.setAttribute('width', canvasDimension);
-            canvas.setAttribute('height', canvasDimension);
+
+            // 48 -> dimension 32.
+            // radius should be 12, plus 4 width
+            // 16 -> dimension 16, radius 4
+            var dimension, radius, arcWidth;
+            if (this.getAttribute('width') === "48" || this.getAttribute('width') === "24") {
+                // an overly large ball is scary
+                dimension = this.getAttribute('width') * 0.5 + 8;
+                canvas.style.marginRight = "15px";
+                canvas.style.verticalAlign = "middle";
+            // XXX hack, this is for the main page job list
+            } else if (this.classList.contains("icon32x32")) {
+                dimension = 24;
+                canvas.style.marginTop = "4px";
+                canvas.style.marginLeft = "4px";
+            } else {
+                dimension = this.getAttribute('width') || 12;
+            }
+            canvas.setAttribute('width', dimension);
+            canvas.setAttribute('height', dimension);
 
             var circle = new ProgressCircle({
                 canvas: canvas,
-                minRadius: 4,
-                arcWidth: 3
+                minRadius: dimension * 3 / 8 - 2,
+                arcWidth: dimension / 8 + 1
             });
 
             var x = 0;
@@ -501,14 +525,13 @@ jQuery(function($) {
                 fillColor: color,
                 progressListener: function() {
                     if (x >= 1) { x = 0; }
-                    x = x + 0.01;
+                    x = x + 0.005;
                     return x; // between 0 and 1
                 },
             });
             // jenkins does ajax every 5 seconds, this should time it perfectly
-            circle.start(49);
-            a.after(canvas);
-            a.remove();
+            circle.start(24);
+            $(this).after(canvas).css('display', 'none');
         });
     };
 
@@ -529,6 +552,9 @@ jQuery(function($) {
     if (isJobHomepage(window.location.pathname)) {
         var jobUrl = getJobUrl(window.location.pathname);
         $.getJSON(jobUrl + 'api/json?tree=lastBuild[number]', function(data) {
+            if (!'lastBuild' in data || data.lastBuild === null || !('number' in data.lastBuild)) {
+                return;
+            }
             var message = "View console output for the latest test";
             var href = jobUrl + data.lastBuild.number + '/consoleFull';
             var h2 = $("h2:contains('Permalinks')");
@@ -575,4 +601,8 @@ jQuery(function($) {
             title.after(button);
         }
     }
+
+    $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
+        "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
+        "Doony theme</a></span>");
 });
