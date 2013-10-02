@@ -5,8 +5,16 @@ your Jenkins user experience much better.
 
 ## Who's Using It
 
-Doony is in use at Twilio and Panic, Inc. Ping me to add your company name
-here.
+Doony was made at [Twilio]( https://www.twilio.com ). It's also been forked/starred by
+employees at:
+
+- Panic, Inc
+- the BBC
+- Instagram
+- Netflix
+- eBay
+- Groupon
+- Mail.ru
 
 ### Before
 
@@ -76,7 +84,7 @@ the default Jenkins styles.
         - https://rawgithub.com/kevinburke/doony/master/doony.js
         - https://rawgithub.com/kevinburke/doony/master/doony.css
 
-    You should not use those URL's for production, however.
+    However, [don't use those URL's for production](http://rawgithub.com/#can-i-use-rawgithub-in-production).
 
     Alternatively you can let Jenkins self host these files by putting them in `~/.jenkins/userContent`
     With the default Jenkins settings the files you use will then be:
