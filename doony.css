@@ -90,11 +90,11 @@ input::-moz-focus-inner {
   cursor: pointer;
   background-color: #f5f5f5;
   *background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, white, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: -o-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(to bottom, white, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   border: 1px solid #cccccc;
   *border: 0;
@@ -600,6 +600,7 @@ input[type="password"],
 select,
 textarea {
   padding: 6px 12px;
+  width: 96%;
 }
 
 #main-table {
@@ -693,8 +694,7 @@ textarea {
  * too.
  */
 body > pre,
-#main-panel > pre,
-.console-output {
+#main-panel > pre {
   font-size: 14px;
   background-color: #111;
   color: #eee;
@@ -786,9 +786,9 @@ a.yuimenulabel, a.yuimenuitemlabel,
 
 .doony-circle-aborted {
   background: #999;
-  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #cccccc 0%, #999999 100%);
-  background-image: -webkit-radial-gradient(3px 3px, circle cover, #cccccc, #999999);
-  background-image: radial-gradient(circle at 3px 3px, #cccccc 0%, #999999 100%);
+  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ccc 0%, #999 100%);
+  background-image: -webkit-radial-gradient(3px 3px, circle cover, #ccc, #999);
+  background-image: radial-gradient(circle at 3px 3px, #ccc 0%, #999 100%);
 }
 
 .doony-circle-failure {
@@ -865,4 +865,40 @@ a.yuimenulabel, a.yuimenuitemlabel,
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+/* Remove ugly help buttons. */
+.help-button img {
+  display: none;
+}
+
+/**
+ * Make Build Pipeline views nice.
+ */
+#main-table #build-pipeline-plugin-content {
+  background: none;
+  border-radius: 0;
+}
+#main-table #build-pipeline-plugin-content .PROJECT {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#main-table #build-pipeline-plugin-content .PROJECT tr.header-name td {
+  color: #fff;
+}
+#main-table #build-pipeline-plugin-content .PROJECT tr.header-name td a:hover {
+  text-decoration: none;
+  color: #cccccc;
+}
+#main-table #build-pipeline-plugin-content .build-card.rounded {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+#main-table #build-pipeline-plugin-content .build-card.rounded tr.header > td:last-child div {
+  border-radius: 0;
+}
+#main-table #build-pipeline-plugin-content tbody.pipelineGroup {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
 }

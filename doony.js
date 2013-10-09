@@ -333,7 +333,7 @@ jQuery(function($) {
         '#4ecdc4', // a bright green blue
         '#d95b43', // orange
         '#556270', // a slate color
-        '#542437', // purple
+        '#6F56A3', // purple
         '#8fbe00', // lime yellow
     ];
 
@@ -666,4 +666,12 @@ jQuery(function($) {
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
         "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
         "Doony theme</a></span>");
+
+    // Remove whitespace in tags. i.e.: <div>  </div> => <div></div>
+    // Helps with fancy styles.
+    $('.build-time').each(function(_,element){
+      if($(element).html().replace(/\s+/g, "") === "") {
+        $(element).html("");
+      }
+    });
 });

@@ -545,6 +545,7 @@ select,
 textarea
 {
     padding: 6px 12px;
+    width: 96%;
 }
 
 #main-table {
@@ -812,4 +813,46 @@ a.yuimenulabel, a.yuimenuitemlabel,
     box-sizing: border-box;
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
+  }
+
+/* Remove ugly help buttons. */
+.help-button img {
+  display: none;
+}
+
+/**
+ * Make Build Pipeline views nice.
+ */
+#main-table #build-pipeline-plugin-content {
+  background: none;
+  border-radius: 0;
+
+  .PROJECT {
+    background-color: rgba(0, 0, 0, 0.5);
+    tr.header-name td {
+      color: #fff;
+
+      a:hover {
+        text-decoration: none;
+        color: darken(#fff, 20%);
+      }
+    }
+  }
+
+  .build-card.rounded {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    border-radius: 0;
+
+    tr.header > td:last-child div {
+      border-radius: 0;
+    }
+  }
+
+  tbody.pipelineGroup {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
 }
