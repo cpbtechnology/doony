@@ -349,4 +349,11 @@ jQuery(function($) {
         $(element).html("");
       }
     });
+
+    // Add classes to build-pipeline icons to make them easier to style.
+    $('.build-actions .icons img').each(function(_,element) {
+      var button = $(element).parent();
+      button.addClass('button');
+      button.addClass($(element).attr('title'));
+    });
 });
