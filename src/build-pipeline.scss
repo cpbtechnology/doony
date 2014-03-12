@@ -151,6 +151,7 @@
 
         &.trigger {
           background: none !important;
+          position: relative;
           margin-right: 6px;
           color: #ff7100;
 
@@ -165,7 +166,18 @@
           &:before {
             font-family: FontAwesome;
             font-size: 18px;
-            content: "\f135";
+            content: "\f111";
+          }
+
+          &:after {
+            font-family: FontAwesome;
+            font-size: 12px;
+            content: "\f0e7";
+            color: white;
+
+            position: absolute;
+            left: 5px;
+            top: 0;
           }
         }
       }
