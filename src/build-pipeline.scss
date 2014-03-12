@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3");
+  src: url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#top-panel {
+  background-color: #ff7100 !important;
+  border-radius: 0;
+}
+
+#icon-bar {
+  display: none;
+}
+
+#main-table #build-pipeline-plugin-content {
+  #project-pipeline {
+    .build-card {
+      background-color: transparent;
+
+
+      tr.header-name td {
+        color: #333;
+        text-transform: uppercase;
+
+        a:hover {
+          color: #777;
+          font-weight: bold;
+        }
+
+        .header-wrapper {
+          width: 190px;
+          text-align: center;
+
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+
+    td.next img {
+      display: none;
+    }
+  }
+
+  .build-pipeline {
+    .revision-cell {
+      .header {
+        display: none;
+      }
+
+      table.revision {
+        background-color: transparent;
+        width: 190px !important;
+      }
+    }
+
+    .next .status.next {
+      &:before  {
+        font-family: FontAwesome;
+        font-size: 24px;
+        content: "\f061";
+        color: #555;
+      }
+
+      img {
+        display: none;
+      }
+    }
+
+    .build-card {
+      width: 185px !important;
+      height: 80px;
+      padding-top: 8px;
+
+      .header {
+        display: none;
+      }
+
+      .build-time {
+        width: 160px;
+        background: none;
+
+        &:empty {
+          display: none;
+        }
+
+        &:not(:empty):before {
+          font-family: FontAwesome;
+          content: "\f073";
+          color: #333;
+        }
+      }
+
+      .build-duration {
+        background: none;
+
+        &:before {
+          font-family: FontAwesome;
+          content: "\f017";
+        }
+      }
+
+      .build-user {
+        width: 155px;
+        padding-left: 7px;
+        background: none;
+
+        &:before {
+          font-family: FontAwesome;
+          content: "\f007";
+          margin-right: 4px;
+        }
+      }
+
+      .build-actions .icons .button {
+        &.console {
+          position: relative;
+          margin-right: 6px;
+          color: #06c;
+
+          img {
+            display: none;
+          }
+
+          &:hover {
+            text-decoration: none;
+            color: #039;
+          }
+
+          &:before {
+            font-family: FontAwesome;
+            font-size: 18px;
+            content: "\f0c8";
+          }
+
+          &:after {
+            font-family: FontAwesome;
+            font-size: 8px;
+            content: "\f120";
+            color: white;
+
+            position: absolute;
+            left: 3px;
+            top: 1px;
+          }
+        }
+
+        &.trigger {
+          background: none !important;
+          margin-right: 6px;
+          color: #ff7100;
+
+          img {
+            display: none;
+          }
+
+          &:hover {
+            color: #cc3e00;
+          }
+
+          &:before {
+            font-family: FontAwesome;
+            font-size: 18px;
+            content: "\f135";
+          }
+        }
+      }
+    }
+  }
+}
+
