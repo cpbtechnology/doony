@@ -5,7 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 #top-panel {
   background-color: #ff7100 !important;
   border-radius: 0;
@@ -130,12 +129,12 @@
 #main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:before {
   font-family: FontAwesome;
   font-size: 18px;
-  content: "\f111";
+  content: "\f0c2";
 }
 #main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:after {
   font-family: FontAwesome;
-  font-size: 12px;
-  content: "\f0e7";
+  font-size: 10px;
+  content: "\f062";
   color: white;
   position: absolute;
   left: 5px;
