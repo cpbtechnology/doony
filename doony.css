@@ -137,11 +137,11 @@
 }
 
 .PENDING {
-  background-color: #eee;
+  background-color: #eee !important;
 }
 
 .MANUAL {
-  background-color: #bbb;
+  background-color: #bbb !important;
 }
 
 body.yui-skin-sam,
@@ -767,12 +767,13 @@ textarea {
 }
 
 .yui-skin-sam #search-box {
-  font-size: 16px;
+  font-size: 15px;
   background-image: none;
   border-color: #ccc;
   color: #555;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  padding: 4px 8px;
+  padding: 2px 2rem;
+  border-radius: 1rem;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -781,6 +782,29 @@ textarea {
   border-color: #66afe9;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#searchform {
+  position: relative;
+  display: inline-block;
+}
+
+.icon_search {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 5px;
+  left: 11px;
+  color: #babbbf;
+  text-shadow: none;
+}
+.icon_search:before {
+  content: "\f002";
 }
 
 #search-box-completion li {

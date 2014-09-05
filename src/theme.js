@@ -315,6 +315,7 @@ jQuery(function($) {
     }
 
     $('#search-box').attr('placeholder', 'Search');
+    $('#search-box').after('<i class="icon_search"></i>');
 
     // Remove whitespace in tags. i.e.: <div>  </div> => <div></div>
     // Helps with fancy styles.
