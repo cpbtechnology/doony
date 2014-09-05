@@ -327,16 +327,6 @@
 // concatenated with other JS files into doony.js, and then minified into
 // doony.min.js
 jQuery(function($) {
-
-    var colors = [
-        '#C02942', // a red
-        '#4ecdc4', // a bright green blue
-        '#d95b43', // orange
-        '#556270', // a slate color
-        '#6F56A3', // purple
-        '#8fbe00', // lime yellow
-    ];
-
     var Alert = {
         ERROR : "alert-danger",
         WARNING: "alert-warning"
@@ -353,17 +343,6 @@ jQuery(function($) {
         } else {
             return parts.slice(0, -2).join(".");
         }
-    };
-
-    var hashCode = function(string) {
-        var hash = 0, i, l, char;
-        if (string.length === 0) return hash;
-        for (i = 0, l = string.length; i < l; i++) {
-            char  = string.charCodeAt(i);
-            hash  = ((hash<<5)-hash)+char;
-            hash |= 0; // Convert to 32bit integer
-        }
-        return hash;
     };
 
     var isJobPage = function(path) {
@@ -445,9 +424,6 @@ jQuery(function($) {
             doonyTitleLink.addClass("new-header-link");
         }
     }
-
-    var color = colors[Math.abs(hashCode(domain)) % colors.length];
-    $("#top-panel, #header").css('background-color', color);
 
     // Remove icons from the left hand menu and strip nbsp's
     $(".task").each(function() {
@@ -663,9 +639,7 @@ jQuery(function($) {
         }
     }
 
-    $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
-        "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
-        "Doony theme</a></span>");
+    $('#search-box').attr('placeholder', 'Search');
 
     // Remove whitespace in tags. i.e.: <div>  </div> => <div></div>
     // Helps with fancy styles.

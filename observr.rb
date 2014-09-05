@@ -3,3 +3,4 @@
 watch('src/theme.js') { puts "\033[31mCompiling javascript\033[0m"; system("make js") }
 watch('VERSION') { puts "\033[31mCompiling javascript\033[0m"; system("make js") }
 watch('src/doony.scss') { puts "\033[31mCompiling css\033[0m"; system("make css") }
+watch('src/build-pipeline.scss') { puts "\033[31mCompiling css\033[0m"; system("make css") }

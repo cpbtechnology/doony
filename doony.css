@@ -1,3 +1,149 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3");
+  src: url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+#icon-bar {
+  display: none;
+}
+
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card {
+  background-color: transparent;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td {
+  color: #333;
+  text-transform: uppercase;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td a:hover {
+  color: #777;
+  font-weight: bold;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td .header-wrapper {
+  width: 190px;
+  text-align: center;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td .header-wrapper img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline td.next img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .revision-cell .header {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .revision-cell table.revision {
+  background-color: transparent;
+  width: 190px !important;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .next .status.next:before {
+  font-family: FontAwesome;
+  font-size: 24px;
+  content: "\f061";
+  color: #555;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .next .status.next img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card {
+  width: 185px !important;
+  height: 80px;
+  padding-top: 8px;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .header {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-time {
+  width: 160px;
+  background: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-time:empty {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-time:not(:empty):before {
+  font-family: FontAwesome;
+  content: "\f073";
+  color: #333;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-duration {
+  background: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-duration:before {
+  font-family: FontAwesome;
+  content: "\f017";
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-user {
+  width: 155px;
+  padding-left: 7px;
+  background: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-user:before {
+  font-family: FontAwesome;
+  content: "\f007";
+  margin-right: 4px;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console {
+  position: relative;
+  margin-right: 6px;
+  color: #06c;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console:hover {
+  text-decoration: none;
+  color: #039;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console:before {
+  font-family: FontAwesome;
+  font-size: 18px;
+  content: "\f0c8";
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console:after {
+  font-family: FontAwesome;
+  font-size: 8px;
+  content: "\f120";
+  color: white;
+  position: absolute;
+  left: 3px;
+  top: 1px;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger {
+  background: none !important;
+  position: relative;
+  margin-right: 6px;
+  color: #ff7100;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:hover {
+  color: #cc3e00;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:before {
+  font-family: FontAwesome;
+  font-size: 18px;
+  content: "\f0c2";
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:after {
+  font-family: FontAwesome;
+  font-size: 10px;
+  content: "\f062";
+  color: white;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+
+.PENDING {
+  background-color: #eee;
+}
+
+.MANUAL {
+  background-color: #bbb;
+}
+
 body.yui-skin-sam,
 .yui-skin-sam table,
 .yui-skin-sam form,
@@ -612,6 +758,8 @@ textarea {
   background-url: none;
   background-image: none;
   border-bottom: 1px solid #ccc;
+  background-color: #777;
+  border-radius: 0;
 }
 
 .yui-skin-sam #top-panel img {
@@ -621,6 +769,25 @@ textarea {
 .yui-skin-sam #search-box {
   font-size: 16px;
   background-image: none;
+  border-color: #ccc;
+  color: #555;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  padding: 4px 8px;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.yui-skin-sam #search-box:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#search-box-completion li {
+  line-height: 18px;
+}
+#search-box-completion .yui-ac-content {
+  border-color: #ccc;
 }
 
 /******************* side panel styles ***********************/
