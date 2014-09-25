@@ -1,3 +1,149 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3");
+  src: url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+#icon-bar {
+  display: none;
+}
+
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card {
+  background-color: transparent;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td {
+  color: #333;
+  text-transform: uppercase;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td a:hover {
+  color: #777;
+  font-weight: bold;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td .header-wrapper {
+  width: 190px;
+  text-align: center;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline .build-card tr.header-name td .header-wrapper img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content #project-pipeline td.next img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .revision-cell .header {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .revision-cell table.revision {
+  background-color: transparent;
+  width: 190px !important;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .next .status.next:before {
+  font-family: FontAwesome;
+  font-size: 24px;
+  content: "\f061";
+  color: #555;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .next .status.next img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card {
+  width: 185px !important;
+  height: 80px;
+  padding-top: 8px;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .header {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-time {
+  width: 160px;
+  background: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-time:empty {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-time:not(:empty):before {
+  font-family: FontAwesome;
+  content: "\f073";
+  color: #333;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-duration {
+  background: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-duration:before {
+  font-family: FontAwesome;
+  content: "\f017";
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-user {
+  width: 155px;
+  padding-left: 7px;
+  background: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-user:before {
+  font-family: FontAwesome;
+  content: "\f007";
+  margin-right: 4px;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console {
+  position: relative;
+  margin-right: 6px;
+  color: #06c;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console:hover {
+  text-decoration: none;
+  color: #039;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console:before {
+  font-family: FontAwesome;
+  font-size: 18px;
+  content: "\f0c8";
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.console:after {
+  font-family: FontAwesome;
+  font-size: 8px;
+  content: "\f120";
+  color: white;
+  position: absolute;
+  left: 3px;
+  top: 1px;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger {
+  background: none !important;
+  position: relative;
+  margin-right: 6px;
+  color: #ff7100;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger img {
+  display: none;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:hover {
+  color: #cc3e00;
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:before {
+  font-family: FontAwesome;
+  font-size: 18px;
+  content: "\f0c2";
+}
+#main-table #build-pipeline-plugin-content .build-pipeline .build-card .build-actions .icons .button.trigger:after {
+  font-family: FontAwesome;
+  font-size: 10px;
+  content: "\f062";
+  color: white;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+
+.PENDING {
+  background-color: #eee !important;
+}
+
+.MANUAL {
+  background-color: #bbb !important;
+}
+
 body.yui-skin-sam,
 .yui-skin-sam table,
 .yui-skin-sam form,
@@ -90,11 +236,11 @@ input::-moz-focus-inner {
   cursor: pointer;
   background-color: #f5f5f5;
   *background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, white, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: -o-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(to bottom, white, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   border: 1px solid #cccccc;
   *border: 0;
@@ -600,6 +746,7 @@ input[type="password"],
 select,
 textarea {
   padding: 6px 12px;
+  width: 96%;
 }
 
 #main-table {
@@ -611,6 +758,8 @@ textarea {
   background-url: none;
   background-image: none;
   border-bottom: 1px solid #ccc;
+  background-color: #777;
+  border-radius: 0;
 }
 
 .yui-skin-sam #top-panel img {
@@ -618,8 +767,51 @@ textarea {
 }
 
 .yui-skin-sam #search-box {
-  font-size: 16px;
+  font-size: 15px;
   background-image: none;
+  border-color: #ccc;
+  color: #555;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  padding: 2px 2rem;
+  border-radius: 1rem;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.yui-skin-sam #search-box:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#searchform {
+  position: relative;
+  display: inline-block;
+}
+
+.icon_search {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 5px;
+  left: 11px;
+  color: #babbbf;
+  text-shadow: none;
+}
+.icon_search:before {
+  content: "\f002";
+}
+
+#search-box-completion li {
+  line-height: 18px;
+}
+#search-box-completion .yui-ac-content {
+  border-color: #ccc;
 }
 
 /******************* side panel styles ***********************/
@@ -785,9 +977,9 @@ a.yuimenulabel, a.yuimenuitemlabel,
 
 .doony-circle-aborted {
   background: #999;
-  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #cccccc 0%, #999999 100%);
-  background-image: -webkit-radial-gradient(3px 3px, circle cover, #cccccc, #999999);
-  background-image: radial-gradient(circle at 3px 3px, #cccccc 0%, #999999 100%);
+  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ccc 0%, #999 100%);
+  background-image: -webkit-radial-gradient(3px 3px, circle cover, #ccc, #999);
+  background-image: radial-gradient(circle at 3px 3px, #ccc 0%, #999 100%);
 }
 
 .doony-circle-failure {
@@ -864,4 +1056,40 @@ a.yuimenulabel, a.yuimenuitemlabel,
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+/* Remove ugly help buttons. */
+.help-button img {
+  display: none;
+}
+
+/**
+ * Make Build Pipeline views nice.
+ */
+#main-table #build-pipeline-plugin-content {
+  background: none;
+  border-radius: 0;
+}
+#main-table #build-pipeline-plugin-content .PROJECT {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#main-table #build-pipeline-plugin-content .PROJECT tr.header-name td {
+  color: #fff;
+}
+#main-table #build-pipeline-plugin-content .PROJECT tr.header-name td a:hover {
+  text-decoration: none;
+  color: #cccccc;
+}
+#main-table #build-pipeline-plugin-content .build-card.rounded {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+#main-table #build-pipeline-plugin-content .build-card.rounded tr.header > td:last-child div {
+  border-radius: 0;
+}
+#main-table #build-pipeline-plugin-content tbody.pipelineGroup {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
 }

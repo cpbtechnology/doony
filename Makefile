@@ -26,6 +26,8 @@ watch:
 css:
 	scss --style expanded src/doony.scss > doony.css
 	scss --style compressed src/doony.scss > doony.min.css
+	scss --style expanded src/build-pipeline.scss > build-pipeline.css
+	scss --style compressed src/build-pipeline.scss > build-pipeline.min.css
 
 jshint:
 	# Checking the file with jshint
